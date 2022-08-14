@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Health Club</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+<script src="https://kit.fontawesome.com/76c970a45b.js" crossorigin="anonymous"></script>
+<style>
+    /*css reset*/
+    /* css of full body .....................................*/
+    
+    .whole {
+        margin: 0px;
+        /* height: 1500px; */
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        /* align-items: center; */
+    }
+    
+    body {
+        color: white;
+        margin: 0px;
+        padding: 0px;
+        /* background: url('bg_3.jpg'); */
+        /* background-color: #f0f8ff; */
+        background-image: linear-gradient(180deg, rgb(1, 0, 0), rgb(37, 0, 255));
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        height: 1500px;
+        font-family: 'Baloo Bhaijaan 2', cursive;
+    }
+    /* css of header.............................................. */
+    
+    .header {
+        background-color: black;
+        width: 100%;
+        height: 120px;
+        position: fixed;
+        z-index: 100;
+        display: flex;
+    }
+    /* css of logo.................................................. */
+    
+    .left {
+        /* display: inline-block; */
+        /* border: 2px solid rgb(117, 208, 238); */
+        position: absolute;
+        left: 14px;
+        top: 10px;
+        text-align: center;
+    }
+    
+    .left img {
+        width: 60px;
+        height: 60px;
+        border-radius: 40px;
+        border: 2px solid rgb(117, 208, 238);
+    }
+    
+    .left div {
+        text-align: center;
+        line-height: 30px;
+        font-size: 25px;
+        font-weight: bolder;
+        transform: translate(-50%, -50%);
+        background: linear-gradient(to right, #4d4d4d 0, white 10%, #4d4d4d 20%);
+        background-position: 0;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: shine 4s infinite linear;
+        animation-fill-mode: forwards;
+        -webkit-text-size-adjust: none;
+        font-weight: 600;
+        font-size: 25px;
+        text-decoration: none;
+        white-space: nowrap;
+        left: 64px;
+        top: 12px;
+        position: relative;
+    }
+    
+    @-moz-keyframes shine {
+        100% {
+            background-position: 250px;
+        }
+    }
+    
+    @-webkit-keyframes shine {
+        100% {
+            background-position: 250px;
+        }
+    }
+    
+    @-o-keyframes shine {
+        100% {
+            background-position: 250px;
+        }
+    }
+    /* css of middle navbar............................................................. */
+    
+    .mid {
+        /* border: 2px solid rgb(119, 203, 234); */
+        /* display: block; */
+        width: 40%;
+        top: 15px;
+        margin: auto;
+        position: absolute;
+        left: 450px;
+    }
+    
+    .navbar {
+        display: inline-block;
+    }
+    
+    .navbar li {
+        display: inline-block;
+        font-size: 20px;
+        padding: 10px;
+    }
+    
+    .navbar li a {
+        color: white;
+        text-decoration: none;
+        /* padding:34px 23px;  */
+    }
+    
+    .navbar li a:hover,
+    .navbar li a:active {
+        color: rgb(112, 109, 109);
+        /* text-decoration: underline; */
+        /* text-decoration:solid rgb(90, 174, 223); */
+    }
+    /* css of top right part.................................................... */
+    
+    .right {
+        /* border: 2px solid rgb(225, 109, 109); */
+        /* display: inline-block; */
+        position: absolute;
+        right: 34px;
+        top: 41px;
+    }
+    
+    .btn {
+        margin: 0px 9px;
+        background-color: transparent;
+        color: white;
+        padding: 4px 14px;
+        border: 2px solid grey;
+        border-radius: 12px;
+        font-size: 10px;
+        cursor: pointer;
+        font-family: 'Baloo Bhaijaan 2', cursive;
+    }
+    
+    .btn:hover {
+        background-color: rgb(75, 74, 74);
+    }
+    /* css of whole website content............................ */
+    
+    .content {
+        flex-direction: column;
+    }
+    /* css of left side top content........................... */
+    
+    .about1 {
+        /* border:3px solid rgb(42, 29, 29); */
+        top: 200px;
+        width: 525px;
+        position: absolute;
+        text-align: inherit;
+        background-color: rgb(111, 225, 210, 0.87);
+        border-top: 50px solid;
+        border-right: 60px solid transparent;
+        font-size: 20px;
+        line-height: 30px;
+        line-height: 2px;
+        opacity: 70%;
+        display: inline-block;
+        z-index: 10;
+        transition: width 2s;
+        transition-timing-function: ease-in;
+    }
+    
+    .about1:hover {
+        width: 570px;
+    }
+    
+    .about1 p {
+        color: black;
+        font-size: 22px;
+        font-weight: bolder;
+        font-style: italic;
+        display: inline-block;
+    }
+    /* css of extra div1 ........................................ */
+    
+    .extra1 {
+        top: 0px;
+        /* border:2px solid brown; */
+        position: relative;
+        height: 180px;
+        width: 500px;
+        opacity: 60%;
+        /* width: 90%; */
+        border-bottom: 262px solid rgb(79, 78, 79);
+        border-left: 0px solid transparent;
+        border-right: 100px solid transparent;
+        display: table-cell;
+    }
+    /* css of extra div2............................................. */
+    
+    .extra2 {
+        top: 0px;
+        /* border:2px solid brown; */
+        position: relative;
+        height: 70px;
+        height: 90px;
+        width: 728px;
+        opacity: 60%;
+        /* width: 90%; */
+        border-top: 310px solid rgb(78, 78, 78);
+        border-left: 0px solid transparent;
+        border-left: 100px solid transparent;
+        display: table-cell;
+        left: 690px;
+        top: -190px;
+    }
+    
+    .about2 {
+        /* border: 2px solid red; */
+        width: 694px;
+        position: relative;
+        left: 810px;
+        bottom: 600px;
+    }
+    
+    #ab2 {
+        color: #00eafa;
+        font-size: 64px;
+        line-height: 0px;
+        font-weight: bolder;
+    }
+    /* wordplay css ..........................................................*/
+    
+    @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300|Oswald);
+    .wordplay {
+        font-size: 47px;
+        font-weight: 700;
+        color: rgb(57, 222, 234);
+    }
+    
+    .wordplay div {
+        overflow: hidden;
+        position: relative;
+        float: right;
+        height: 65px;
+        padding-top: 24px;
+        margin-top: -24px;
+        margin-bottom: -7px;
+        left: -72px;
+    }
+    
+    .wordplay div li {
+        font-family: 'Baloo Bhaijaan 2', cursive;
+        color: #da7b90;
+        font-weight: 700;
+        padding: 0 10px;
+        height: 45px;
+        margin-bottom: 45px;
+        display: block;
+    }
+    
+    .flip2 {
+        -webkit-animation: flip2 6s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+        animation: flip2 6s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+    }
+    
+    .flip3 {
+        -webkit-animation: flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+        animation: flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+    }
+    
+    .flip4 {
+        -webkit-animation: flip4 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+        animation: flip4 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+    }
+    
+    .flip5 {
+        -webkit-animation: flip5 12s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+        animation: flip5 12s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+    }
+    
+    @-webkit-keyframes flip2 {
+        0% {
+            margin-top: -180px;
+        }
+        5% {
+            margin-top: -90px;
+        }
+        50% {
+            margin-top: -90px;
+        }
+        55% {
+            margin-top: 0px;
+        }
+        99.99% {
+            margin-top: 0px;
+        }
+        100% {
+            margin-top: -180px;
+        }
+    }
+    
+    @keyframes flip2 {
+        0% {
+            margin-top: -180px;
+        }
+        5% {
+            margin-top: -90px;
+        }
+        50% {
+            margin-top: -90px;
+        }
+        55% {
+            margin-top: 0px;
+        }
+        99.99% {
+            margin-top: 0px;
+        }
+        100% {
+            margin-top: -180px;
+        }
+    }
+    
+    @-webkit-keyframes flip3 {
+        0% {
+            margin-top: -270px;
+        }
+        5% {
+            margin-top: -180px;
+        }
+        33% {
+            margin-top: -180px;
+        }
+        38% {
+            margin-top: -90px;
+        }
+        66% {
+            margin-top: -90px;
+        }
+        71% {
+            margin-top: 0px;
+        }
+        99.99% {
+            margin-top: 0px;
+        }
+        100% {
+            margin-top: -270px;
+        }
+    }
+    
+    @keyframes flip3 {
+        0% {
+            margin-top: -270px;
+        }
+        5% {
+            margin-top: -180px;
+        }
+        33% {
+            margin-top: -180px;
+        }
+        38% {
+            margin-top: -90px;
+        }
+        66% {
+            margin-top: -90px;
+        }
+        71% {
+            margin-top: 0px;
+        }
+        99.99% {
+            margin-top: 0px;
+        }
+        100% {
+            margin-top: -270px;
+        }
+    }
+    
+    @-webkit-keyframes flip4 {
+        0% {
+            margin-top: -360px;
+        }
+        5% {
+            margin-top: -270px;
+        }
+        25% {
+            margin-top: -270px;
+        }
+        30% {
+            margin-top: -180px;
+        }
+        50% {
+            margin-top: -180px;
+        }
+        55% {
+            margin-top: -90px;
+        }
+        75% {
+            margin-top: -90px;
+        }
+        80% {
+            margin-top: 0px;
+        }
+        99.99% {
+            margin-top: 0px;
+        }
+        100% {
+            margin-top: -360px;
+        }
+    }
+    
+    @keyframes flip4 {
+        0% {
+            margin-top: -360px;
+        }
+        5% {
+            margin-top: -270px;
+        }
+        25% {
+            margin-top: -270px;
+        }
+        30% {
+            margin-top: -180px;
+        }
+        50% {
+            margin-top: -180px;
+        }
+        55% {
+            margin-top: -90px;
+        }
+        75% {
+            margin-top: -90px;
+        }
+        80% {
+            margin-top: 0px;
+        }
+        99.99% {
+            margin-top: 0px;
+        }
+        100% {
+            margin-top: -360px;
+        }
+    }
+    
+    @-webkit-keyframes flip5 {
+        0% {
+            margin-top: -450px;
+        }
+        5% {
+            margin-top: -360px;
+        }
+        20% {
+            margin-top: -360px;
+        }
+        25% {
+            margin-top: -270px;
+        }
+        40% {
+            margin-top: -270px;
+        }
+        45% {
+            margin-top: -180px;
+        }
+        60% {
+            margin-top: -180px;
+        }
+        65% {
+            margin-top: -90px;
+        }
+        80% {
+            margin-top: -90px;
+        }
+        85% {
+            margin-top: 0px;
+        }
+        99.99% {
+            margin-top: 0px;
+        }
+        100% {
+            margin-top: -450px;
+        }
+    }
+    
+    @keyframes flip5 {
+        0% {
+            margin-top: -450px;
+        }
+        5% {
+            margin-top: -360px;
+        }
+        20% {
+            margin-top: -360px;
+        }
+        25% {
+            margin-top: -270px;
+        }
+        40% {
+            margin-top: -270px;
+        }
+        45% {
+            margin-top: -180px;
+        }
+        60% {
+            margin-top: -180px;
+        }
+        65% {
+            margin-top: -90px;
+        }
+        80% {
+            margin-top: -90px;
+        }
+        85% {
+            margin-top: 0px;
+        }
+        99.99% {
+            margin-top: 0px;
+        }
+        100% {
+            margin-top: -450px;
+        }
+    }
+    
+    #ab21 p {
+        font-size: 24px;
+    }
+    
+    #ab21 p {
+        font-size: 24px;
+        height: 40px;
+        animation: an 1s ease-out 1 both;
+        display: inline-block;
+    }
+    
+    @keyframes an {
+        from {
+            opacity: 0;
+            transform: perspective(500px) translate3d(-35px, -40px, -150px) rotate3d(1, -1, 0, 35deg);
+        }
+        to {
+            opacity: 1;
+            transform: perspective(500px) translate3d(0, 0, 0);
+        }
+    }
+    
+    #img_bar1 img {
+        background-repeat: no-repeat;
+        /* background-attachment: fixed;
+        background-size: 100% 100%; */
+        opacity: 100%;
+        width: 1519px;
+        height: 400px;
+    }
+    
+    #img_bar1 {
+        position: absolute;
+        bottom: -34%;
+    }
+    
+    @keyframes example1 {
+        0% {
+            opacity: 0%;
+        }
+        25% {
+            opacity: 25%;
+        }
+        50% {
+            opacity: 50%;
+        }
+        75% {
+            opacity: 75%;
+        }
+        80% {
+            opacity: 80%;
+        }
+        from {
+            left: 100%;
+        }
+        to {
+            left: 0px;
+        }
+    }
+    
+    .side_img1 img {
+        border: 15px solid white;
+        border-radius: 20px;
+        display: list-item;
+        position: relative;
+        left: 0px;
+        bottom: 110px;
+        width: 523px;
+        height: 570px;
+        z-index: 5;
+        animation-name: example1;
+        animation-duration: 4s;
+        animation-direction: normal;
+        /* animation-play-state: paused; */
+        animation-delay: 2s;
+    }
+    
+    .side_img img:hover {
+        animation-play-state: running;
+    }
+    
+    .overlay1 {
+        position: absolute;
+        top: 1054px;
+        left: 14px;
+        background-color: #505151;
+        overflow: hidden;
+        width: 0;
+        height: 79%;
+        /* height: 79%; */
+        transition: 0.6s ease;
+        z-index: 6;
+        opacity: 70%;
+    }
+    
+    .side_img1:hover .overlay1 {
+        width: 524px;
+    }
+    
+    .text1 {
+        white-space: nowrap;
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        overflow: hidden;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+    }
+    
+    @keyframes example2 {
+        0% {
+            opacity: 0%;
+        }
+        25% {
+            opacity: 25%;
+        }
+        50% {
+            opacity: 50%;
+        }
+        75% {
+            opacity: 75%;
+        }
+        80% {
+            opacity: 80%;
+        }
+        100% {
+            opacity: 100%;
+        }
+        from {
+            left: 0px;
+        }
+        to {
+            left: 340px;
+        }
+    }
+    
+    .side_img2 img {
+        border: 14px solid white;
+        background-color: white;
+        display: inline-block;
+        position: relative;
+        border-radius: 10000px;
+        /* background-position: center; */
+        /* background-size: 700px; */
+        background-color: rgb(25, 86, 177);
+        color: aliceblue;
+        text-align: center;
+        left: 340px;
+        bottom: 854px;
+        filter: brightness(110%);
+        /* opacity:80%; */
+        /* top:10px; */
+        width: 302px;
+        height: 309px;
+        z-index: 7;
+        animation-name: example2;
+        animation-duration: 4s;
+        animation-direction: normal;
+        animation-delay: 2s;
+        /* transition: width 2s; */
+    }
+    
+    .container {
+        font-family: 'Baloo Bhaijaan 2', cursive;
+        margin: 106px 80px;
+        background-color: #7bd8da;
+        color: rgb(54, 51, 51);
+        padding: 15px;
+        border: 2px solid gray;
+        /* border-radius: 10px; */
+        font-size: 18px;
+        border-radius: 28px;
+        width: 40%;
+        /* height:30%; */
+        /* cursor:pointer; */
+        /* -webkit-backdrop-filter: brightness(10%); */
+        opacity: 80%;
+        text-align: center;
+        position: absolute;
+        top: 1700px;
+        left: 25%;
+        z-index: 0;
+    }
+    
+    .form-group input:hover {
+        background-color: rgb(255, 255, 255);
+        /* -moz-text-decoration-color: aliceblue; */
+    }
+    
+    .form-group input {
+        text-align: center;
+        display: block;
+        width: 95%;
+        color: rgb(184, 184, 184);
+        background-color: rgb(16, 15, 15);
+        padding: 8px;
+        border: 2px solid black;
+        border-radius: 10px;
+        font-family: 'Baloo Bhaijaan 2', cursive;
+    }
+    
+    .container div {
+        padding-bottom: 15px;
+    }
+    
+    .container button {
+        background-color: rgb(76, 73, 73);
+        color: white;
+        border-radius: 5px;
+        padding: 5px 5px 5px 5px;
+        cursor: pointer;
+        margin: 0px 70px;
+    }
+    
+    .container button:hover {
+        background-color: rgb(40, 39, 39);
+        font-weight: bolder;
+    }
+    
+    .footer {
+        width: 200%;
+        height: 10%;
+        border: 2px solid red;
+        background-color: black;
+        position: relative;
+        bottom: -300px;
+        display: flex;
+    }
+    
+    .d {
+        margin: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        height: fit-content;
+        width: fit-content;
+    }
+    
+    #d1 img {
+        position: relative;
+        top: 20px;
+        width: 60px;
+        height: 60px;
+        border-radius: 40px;
+        border: 2px solid rgb(117, 208, 238);
+    }
+    
+    #d1 {
+        text-align: center;
+        position: relative;
+        left: 30px;
+    }
+    
+    #d2 ul {
+        list-style-type: none;
+    }
+    
+    #d2 ul li {
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+</style>
+
+<body>
+    <!-- <div class="header"> -->
+    <div class="whole">
+        <header class="header">
+            <!-- left box for logo -->
+            <a href="/index.html">
+                <div class="left">
+                    <img src="/logo.jpg" alt="">
+                    <div>Health Club</div>
+                </div>
+            </a>
+            <!-- mid box for navbar -->
+            <div class="mid">
+                <ul class="navbar">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Fitness calculator</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <!-- left box for contact -->
+            <div class="right">
+                <!-- <p><i class="fa-light fa-phone"></i> -->
+                <button class="btn">Call Us Now</button>
+                <button class="btn">Email Us</button>
+            </div>
+
+        </header>
+        <div class="bdy">
+            <div class="content">
+                <div class="extra1">
+
+                </div>
+                <!-- about us -->
+                <div class="about1">
+                    <p>&Scaron; &raquo;&nbsp;&nbsp;</p>Start where you are <br>
+                    <p>&Ubreve; &raquo;&nbsp;&nbsp;</p> Use what you have <br>
+                    <p>&Dcaron; &raquo;&nbsp;&nbsp;</p> Do what you can
+                </div>
+                <div class="extra2">
+
+                </div>
+                <div class="about2">
+                    <div id="ab2">
+                        <H4 class="wordplay">
+                            <span>THE FREAK HUB: </span>
+                            <div>
+                                <!-- Use classes 2,3,4, or 5 to match the number of words -->
+                                <ul class="flip5">
+                                    <li>GAIN</li>
+                                    <li>CARRY ON</li>
+                                    <li>WORK OUT</li>
+                                    <li>ACCOMPLISH</li>
+                                    <li>JOIN</li>
+                                </ul>
+                            </div>
+                        </H4>
+                    </div>
+                    <div id="ab21">
+                        <p>At Health Club we make group workouts fun, daily food healthy & tasty, mental fitness easy with yoga & meditation, and medical & lifestyle care hassle-free.
+                            <br>#GetBetterEveryDay
+                        </p>
+                    </div>
+                </div>
+                <div id="img_bar1">
+                    <img src="/img bar1.jpeg" alt="">
+                </div>
+                <div class="side_img1">
+                    <img src="/side_img1.jpg" alt="">
+                    <div class="overlay1">
+                        <a href="#apply">
+                            <div class="text1">Apply Now</div>
+                        </a>
+                    </div>
+                </div>
+                <div class="side_img2">
+                    <img src="/side_img3.jpg" alt="">
+                </div>
+            </div>
+
+
+            <div class="container" id="apply">
+                <h2>Join the best Gym of Bangalore now</h2>
+                <form action="noaction.php">
+                    <div class="form-group">
+                        <input type="text" name="" placeholder="Enter Your First Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="" placeholder="Enter Your Last Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="" placeholder="Enter Your Age">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="" placeholder="Enter Your Weight in Kg">
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="" placeholder="Enter Your Contact No">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="" placeholder="Enter Your Email id">
+                    </div>
+                    <!-- <div class="btn"> -->
+                    <button type="reset">Reset</button>
+                    <button type="submit">Submit</button>
+                    <!-- </div> -->
+                </form>
+            </div>
+
+            <div class="footer">
+                <div class="d" id="d1">
+                    <img src="/logo.jpg" alt="">
+                    <div>Health Club</div>
+                </div>
+                <div class="d" id="d2">
+                    <ul>
+                        <li> Home </li>
+                        <li>About us </li>
+                        <li> Apply Now </li>
+                    </ul>
+                </div>
+                <div class="d " id="d3 "></div>
+                <div class="d " id="d4 "></div>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+</html>
